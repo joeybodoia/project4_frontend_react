@@ -1,4 +1,5 @@
 import React from "react"
+import { Route, Link, Switch } from "react-router-dom";
 
 
 const Playlist = (props) => {
@@ -11,6 +12,9 @@ const Playlist = (props) => {
           return(
             <div style={{"border":"2px solid black"}}>
               <h1>{playlist.name}</h1>
+              <Link to={`/playlists/${playlist.id}`}>
+                <a>View Playlist</a>
+              </Link>
             </div>
           )
         })}

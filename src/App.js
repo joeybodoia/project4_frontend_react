@@ -5,6 +5,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import Home from "./Home"
 import Playlist from "./Playlist"
 import Song from "./ShowSong"
+import ShowPlaylist from "./ShowPlaylist"
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
         <Route exact path="/" render={(rp) => <Home {...rp} songs = {songs}/>} />
         <Route exact path="/playlists" render={(rp) => <Playlist {...rp} playlists = {playlists}/>} />
         <Route exact path="/:id" render={(rp) => <Song {...rp} songs = {songs}/>} />
+        <Route exact path="/playlists/:id" render={(rp) => <ShowPlaylist {...rp} playlists = {playlists}/>} />
       </Switch>
     </div>
   );
