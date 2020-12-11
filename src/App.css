@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+
+.linksContainer {
+  display: flex;
+  height: 30px;
+  width: 100%;
+  justify-content: start;
+  background-color: lightgray;
+  /* position: fixed; */
+
+}
+
+/* .homeLinkContainer {
+  display:flex;
+} */
+
+.homeLink {
+  /* position: absolute; */
+  /* border:2px solid blue; */
+  margin: 0vw 1vw 0vw 1vw;
+  font-size: 1.5vw;
+  color: black;
+}
+
+.playlistLink {
+  font-size: 1.5vw;
+  color: black;
+}
+
+.songsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.song {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1vw;
+  width: 20%;
+  height: 13.5vw;
+  margin-bottom: 3vw;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}

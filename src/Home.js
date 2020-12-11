@@ -12,31 +12,34 @@ const Home = (props) => {
     const {getSongs} = props
 
     const loadedSongs = () => (
-        <>
+        <div className="songsContainer" style={{"border":"2px solid green", "margin-top": "4vw"}}>
         {songs.map((song)=> {
           return(
-            <div style={{"border":"2px solid black"}}>
-              <h1>{song.title}</h1>
-              <h2>{song.artist}</h2>
-              <Link to={`/${song.id}`}>
-                <a>View Song</a>
-              </Link>
-              <button onClick={async () => {
-            // make delete request
-            await fetch("http://localhost:3000/songs/" + song.id, {
-              method: "delete"
-            })
-            // get updated list of notices
-            getSongs()
-          }}>Delete</button>
-            </div>
+           
+                <div className = "song" style={{"border":"2px solid red"}}>
+                    <h1>{song.title}</h1>
+                    <h2>{song.artist}</h2>
+                    <div className="container">
+                        <Link to={`/${song.id}`}>
+                            <a>View Song</a>
+                        </Link>
+                        <button onClick={async () => {
+                        // make delete request
+                        await fetch("http://localhost:3000/songs/" + song.id, {
+                        method: "delete"
+                        })
+                        // get updated list of notices
+                        getSongs()
+                        }}>Delete</button>
+                    </div>
+                </div>
           )
         })}
-        </>
+        </div>
       )
     return(
         <div>
-            <h1>All Songs</h1>
+            <h1 style={{"margin-top":"2vw", "margin-bottom": "2vw"}}>All Songs</h1>
             <Link to="/songs/new">
                 <a>New Song</a>
             </Link>

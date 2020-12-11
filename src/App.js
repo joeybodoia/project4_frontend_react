@@ -46,21 +46,27 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="links">
-        <Link to="/">
-          <a>Home</a>
-        </Link>
-        <Link to="/playlists">
-          <a>Playlists</a>
-        </Link>
-      </nav>
-      <Switch>
-        <Route exact path="/" render={(rp) => <Home {...rp} songs = {songs} getSongs={getSongs}/>} />
-        <Route exact path="/playlists" render={(rp) => <Playlist {...rp} playlists = {playlists}/>} />
-        <Route exact path="/:id" render={(rp) => <Song {...rp} songs = {songs}/>} />
-        <Route exact path="/playlists/:id" render={(rp) => <ShowPlaylist {...rp} playlists = {playlists} songs = {songs}/>} />
-        <Route exact path="/songs/new" render={(rp) => <SongForm {...rp} getSongs={getSongs}/>}/>
-      </Switch>
+      <header className="linksContainer" style={{"border":"2px solid red"}}>
+        <div className = "homeLinkContainer">
+          <Link to="/" style={{"text-decoration":"none"}}>
+            <a className="homeLink" style={{"text-decoration":"none"}}>Home</a>
+          </Link>
+        </div>
+        <div className="playlistLinkContainer">
+          <Link to="/playlists" style={{"text-decoration":"none"}}>
+            <a className="playlistLink">Playlists</a>
+          </Link>
+        </div>
+      </header>
+      <main>
+        <Switch>
+          <Route exact path="/" render={(rp) => <Home {...rp} songs = {songs} getSongs={getSongs}/>} />
+          <Route exact path="/playlists" render={(rp) => <Playlist {...rp} playlists = {playlists}/>} />
+          <Route exact path="/:id" render={(rp) => <Song {...rp} songs = {songs}/>} />
+          <Route exact path="/playlists/:id" render={(rp) => <ShowPlaylist {...rp} playlists = {playlists} songs = {songs}/>} />
+          <Route exact path="/songs/new" render={(rp) => <SongForm {...rp} getSongs={getSongs}/>}/>
+        </Switch>
+      </main>
     </div>
   );
 }
