@@ -22,6 +22,8 @@ function App() {
     setSongs(data)
   }
 
+ 
+
   // Function to make API call to get Playlists
   const getPlaylists = async () => {
     const response = await fetch("http://localhost:3000/playlists")
@@ -52,7 +54,7 @@ function App() {
         </Link>
       </nav>
       <Switch>
-        <Route exact path="/" render={(rp) => <Home {...rp} songs = {songs}/>} />
+        <Route exact path="/" render={(rp) => <Home {...rp} songs = {songs} getSongs={getSongs}/>} />
         <Route exact path="/playlists" render={(rp) => <Playlist {...rp} playlists = {playlists}/>} />
         <Route exact path="/:id" render={(rp) => <Song {...rp} songs = {songs}/>} />
         <Route exact path="/playlists/:id" render={(rp) => <ShowPlaylist {...rp} playlists = {playlists} songs = {songs}/>} />

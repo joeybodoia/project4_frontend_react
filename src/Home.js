@@ -9,6 +9,8 @@ const Home = (props) => {
 
     const {songs} = props
 
+    const {getSongs} = props
+
     const loadedSongs = () => (
         <>
         {songs.map((song)=> {
@@ -19,6 +21,14 @@ const Home = (props) => {
               <Link to={`/${song.id}`}>
                 <a>View Song</a>
               </Link>
+              <button onClick={async () => {
+            // make delete request
+            await fetch("http://localhost:3000/songs/" + song.id, {
+              method: "delete"
+            })
+            // get updated list of notices
+            getSongs()
+          }}>Delete</button>
             </div>
           )
         })}
