@@ -46,14 +46,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="linksContainer" style={{"border":"2px solid red"}}>
+      <header className="linksContainer" >
         <div className = "homeLinkContainer">
-          <Link to="/" style={{"text-decoration":"none"}}>
-            <a className="homeLink" style={{"text-decoration":"none"}}>Home</a>
+          <Link to="/" style={{"text-decoration":"none", "font-family":"'Rock Salt', cursive"}}>
+            <a className="homeLink">Home</a>
           </Link>
         </div>
         <div className="playlistLinkContainer">
-          <Link to="/playlists" style={{"text-decoration":"none"}}>
+          <Link to="/playlists" style={{"text-decoration":"none", "font-family":"'Rock Salt', cursive"}}>
             <a className="playlistLink">Playlists</a>
           </Link>
         </div>

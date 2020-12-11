@@ -17,8 +17,12 @@ const Home = (props) => {
           return(
            
                 <div className = "song" style={{"background-image":`url(${song.coverArt})`, "background-size":"cover"}}>
-                    <h1 style={{"color":"lightgray", "text-shadow":"2px 2px 0 red"}}>{song.title}</h1>
-                    <h2 style={{"color":"white", "text-shadow":"2px 2px 0 red"}}>{song.artist}</h2>
+                    <div style={{"border":"2px solid black", "background-color":"white", "border-radius": "4px"}}>
+                        <h1 style={{"color":"rgb(20,20,20)", "text-shadow":"2px 2px 0 red", "font-family":"'Rock Salt', cursive", "font-size": "1.4vw","border":"2px red"}}>{song.title}</h1>
+                    </div>
+                    <div style={{"border":"2px solid black", "background-color":"white","border-radius": "4px"}}>
+                        <h2 style={{"color":"black", "text-shadow":"2px 2px 0 white","font-family":"'Rock Salt', cursive", "font-size": "1vw"}}>{song.artist}</h2>
+                    </div>
                     <div className="container">
                         <Link to={`/${song.id}`}>
                             <button><a>View Song</a></button>
@@ -39,9 +43,9 @@ const Home = (props) => {
       )
     return(
         <div>
-            <h1 style={{"margin-top":"2vw", "margin-bottom": "2vw"}}>All Songs</h1>
+            <h1 style={{"margin-top":"2vw", "margin-bottom": "2vw", "font-family":"'Rock Salt', cursive"}}>All Songs</h1>
             <Link to="/songs/new">
-                <button><a>New Song</a></button>
+                <button style={{"font-family":"'Rock Salt', cursive"}}><a>New Song</a></button>
             </Link>
             {songs.length > 0 ? loadedSongs() : <h2>There are no songs!</h2>} 
         </div>
@@ -49,3 +53,5 @@ const Home = (props) => {
 }
 
 export default Home
+
+

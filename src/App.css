@@ -43,7 +43,6 @@
   height: 30px;
   width: 100%;
   justify-content: start;
-  background-color: lightgray;
   /* position: fixed; */
 
 }
@@ -76,8 +75,8 @@
   flex-direction: column;
   justify-content: space-around;
   font-size: 1vw;
-  width: 20%;
-  height: 13.5vw;
+  width: 28%;
+  height: 17vw;
   margin-bottom: 3vw;
   padding: 1vw 1vw 1vw 1vw;
   border: 2px solid black;
