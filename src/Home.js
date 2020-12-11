@@ -1,7 +1,11 @@
 import React from "react"
+import { Route, Link, Switch } from "react-router-dom";
+import Song from "./ShowSong"
 
 
 const Home = (props) => {
+
+    
 
     const {songs} = props
 
@@ -12,6 +16,9 @@ const Home = (props) => {
             <div style={{"border":"2px solid black"}}>
               <h1>{song.title}</h1>
               <h2>{song.artist}</h2>
+              <Link to={`/${song.id}`}>
+                <a>View Song</a>
+              </Link>
             </div>
           )
         })}

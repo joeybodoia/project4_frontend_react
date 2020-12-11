@@ -23,8 +23,6 @@ const Playlist = (props) => {
             <h1>Playlists</h1>
             <h2>{playlists.name}</h2>
             {playlists.length > 0 ? loadedPlaylists() : <h2>No Playlists!</h2> }
-            
-
         </div>
     )
 }
