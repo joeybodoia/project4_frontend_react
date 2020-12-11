@@ -1,11 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react"
+import { Route, Link, Switch } from "react-router-dom";
+import Home from "./Home"
+import Playlist from "./Playlist"
 
 function App() {
 
   // state to hold songs
   const [songs, setSongs] = React.useState([])
+
+  // state to hold playlists
+  const [playlists, setPlaylists] = React.useState([])
 
   // Fuction to make API call to get songs
   const getSongs = async () => {
@@ -14,30 +20,39 @@ function App() {
     setSongs(data)
   }
 
+  // Function to make API call to get Playlists
+  const getPlaylists = async () => {
+    const response = await fetch("http://localhost:3000/playlists")
+    const data = await response.json()
+    setPlaylists(data)
+  }
+
   // run getSongs function when the component loads
   React.useEffect(()=> {
     getSongs()
   }, [])
 
-  const loaded = () => (
-    <>
-    {songs.map((song)=> {
-      return(
-        <div>
-          <h1>{song.title}</h1>
-        </div>
-      )
-    })}
-    </>
-  )
+  // run getPlaylists function when the component loads
+  React.useEffect(()=> {
+    getPlaylists()
+  }, [])
 
-
-
+  
 
   return (
     <div className="App">
-      <h1>Playlist App</h1>
-      {songs.length > 0 ? loaded() : <h2>There are no songs!</h2>}
+      <nav className="links">
+        <Link to="/">
+          <a>Home</a>
+        </Link>
+        <Link to="/playlists">
+          <a>Playlists</a>
+        </Link>
+      </nav>
+      <Switch>
+        <Route exact path="/" render={(rp) => <Home {...rp} songs = {songs}/>} />
+        <Route exact path="/playlists" render={(rp) => <Playlist {...rp} playlists = {playlists}/>} />
+      </Switch>
     </div>
   );
 }
