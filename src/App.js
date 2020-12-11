@@ -48,7 +48,7 @@ function App() {
     <div className="App">
       <header className="linksContainer" >
         <div className = "homeLinkContainer">
-          <Link to="/" style={{"text-decoration":"none", "font-family":"'Rock Salt', cursive"}}>
+          <Link to="/" className = "linkHome" style={{"text-decoration":"none", "font-family":"'Rock Salt', cursive"}}>
             <a className="homeLink">Home</a>
           </Link>
         </div>
