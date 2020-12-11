@@ -6,6 +6,7 @@ import Home from "./Home"
 import Playlist from "./Playlist"
 import Song from "./ShowSong"
 import ShowPlaylist from "./ShowPlaylist"
+import SongForm from "./newSongForm"
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
   const getSongs = async () => {
     const response = await fetch("http://localhost:3000/songs")
     const data = await response.json()
-    setSongs(data)
+    setSongs(data.reverse()) //reverse puts the created form data at the top of the page
   }
 
  
@@ -58,6 +59,7 @@ function App() {
         <Route exact path="/playlists" render={(rp) => <Playlist {...rp} playlists = {playlists}/>} />
         <Route exact path="/:id" render={(rp) => <Song {...rp} songs = {songs}/>} />
         <Route exact path="/playlists/:id" render={(rp) => <ShowPlaylist {...rp} playlists = {playlists} songs = {songs}/>} />
+        <Route exact path="/songs/new" render={(rp) => <SongForm {...rp} getSongs={getSongs}/>}/>
       </Switch>
     </div>
   );

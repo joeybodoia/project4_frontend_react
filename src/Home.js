@@ -36,7 +36,10 @@ const Home = (props) => {
       )
     return(
         <div>
-            <h1>Home</h1>
+            <h1>All Songs</h1>
+            <Link to="/songs/new">
+                <a>New Song</a>
+            </Link>
             {songs.length > 0 ? loadedSongs() : <h2>There are no songs!</h2>} 
         </div>
     )
