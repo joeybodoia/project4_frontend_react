@@ -29,7 +29,7 @@ const Home = (props) => {
                         </Link>
                         <button  style={{"font-family":"'Rock Salt', cursive", "font-size":"0.8vw", "background-color":"red", "border":"2px solid black", "border-radius":"4px", "color":"white"}} onClick={async () => {
                         // make delete request
-                        await fetch("http://localhost:3000/songs" + song.id, {
+                        await fetch("https://rails-songs-playlists-api.herokuapp.com/songs/" + song.id, {
                         method: "delete"
                         })
                         // get updated list of notices

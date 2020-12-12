@@ -21,7 +21,7 @@ const SongForm = (props) => {
     // handleSubmit function for when the form is submitted
     const handleSubmit = async (event) => {
         event.preventDefault()
-        await fetch("http://localhost:3000/songs", {
+        await fetch("https://rails-songs-playlists-api.herokuapp.com/songs", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
