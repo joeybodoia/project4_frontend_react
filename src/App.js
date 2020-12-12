@@ -64,7 +64,7 @@ function App() {
           <Route exact path="/playlists" render={(rp) => <Playlist {...rp} playlists = {playlists}/>} />
           <Route exact path="/:id" render={(rp) => <Song {...rp} songs = {songs}/>} />
           <Route exact path="/playlists/:id" render={(rp) => <ShowPlaylist {...rp} playlists = {playlists} songs = {songs} getSongs={getSongs}/>} />
-          <Route exact path="/songs/new" render={(rp) => <SongForm {...rp}/>}/>
+          <Route exact path="/songs/new" render={(rp) => <SongForm {...rp} getSongs={getSongs}/>}/>
         </Switch>
       </main>
     </div>

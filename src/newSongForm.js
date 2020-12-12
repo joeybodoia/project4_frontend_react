@@ -3,7 +3,7 @@ import React from "react"
 
 const SongForm = (props) => {
 
-    const {getSongs} = props
+    // const {getSongs} = props
 
     // state to hold form data
     const [songForm, setSongForm] = React.useState({
@@ -29,7 +29,7 @@ const SongForm = (props) => {
             body: JSON.stringify(songForm)
         })
 
-        getSongs()
+        props.getSongs()
         setSongForm({
             title: "",
             artist: "",
