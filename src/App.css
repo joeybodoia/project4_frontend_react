@@ -106,3 +106,14 @@ body {
   font-family:'Rock Salt', cursive;
   font-size: 0.7vw
 }
+
+.playlistsContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+
+.viewPlaylistLink:hover {
+  color: lightpink;
+} 
