@@ -101,3 +101,8 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
+::placeholder {
+  font-family:'Rock Salt', cursive;
+  font-size: 0.7vw
+}

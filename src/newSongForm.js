@@ -40,14 +40,16 @@ const SongForm = (props) => {
     }
     return(
         <div>
-            <h1 style={{"color":"white"}}>Song Form</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="title" value={songForm.title} onChange={handleChange}/>
-                <input type="text" name="artist" value={songForm.artist} onChange={handleChange}/>
-                <input type="text" name="coverArt" value={songForm.coverArt} onChange={handleChange}/>
-                <input type="text" name="album" value={songForm.album} onChange={handleChange}/>
-                <input type="submit" value="Create Song"/>
+            <h1 style={{"color":"white", "margin-bottom":"5vw", "font-family":"'Rock Salt', cursive", "font-size":"2vw", "color":"lightpink"}}>Add New Song</h1>
+            
+            <form onSubmit={handleSubmit} style={{"border":"3px solid white", "border-radius":"5px" , "height": "25vw", "width": "38%", "display":"flex", "flex-direction":"column", "justifyContent": "space-around", "margin-right":"auto", "margin-left":"auto", "background-image":`url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.adweek.com%2Fadweek.com-prod%2Fwp-content%2Fuploads%2F2017%2F11%2FApple-MUSIC_0002_FLUME.jpg&f=1&nofb=1)`, "background-size":"cover"}}>
+                <input style={{"width":"70%", "margin-right":"auto", "margin-left":"auto","margin-top":"1.2vw", "border":"2px solid gray", "border-radius":"5px", "font-family":"'Rock Salt', cursive", "font-size":"0.7vw"}} type="text" name="title" value={songForm.title} onChange={handleChange} placeholder="Title"/>
+                <input style={{"width":"70%", "margin-right":"auto", "margin-left":"auto", "border":"2px solid gray", "border-radius":"5px", "font-family":"'Rock Salt', cursive", "font-size":"0.7vw"}} type="text" name="artist" value={songForm.artist} onChange={handleChange}placeholder="Artist"/>
+                <input style={{"width":"70%", "margin-right":"auto", "margin-left":"auto", "border":"2px solid gray", "border-radius":"5px", "font-family":"'Rock Salt', cursive", "font-size":"0.7vw"}} type="text" name="coverArt" value={songForm.coverArt} onChange={handleChange}placeholder="Cover Art (image link)"/>
+                <input style={{"width":"70%", "margin-right":"auto", "margin-left":"auto", "border":"2px solid gray", "border-radius":"5px", "font-family":"'Rock Salt', cursive", "font-size":"0.7vw"}} type="text" name="album" value={songForm.album} onChange={handleChange}placeholder="Album"/>
+                <input style={{"width":"30%", "margin-right":"auto", "margin-left":"auto","margin-bottom":"1.2vw", "font-family":"'Rock Salt', cursive", "font-size":"0.7vw", "background-color": "lavender", "border":"2px solid gray", "border-radius":"5px"}} type="submit" value="Create Song"/>
             </form>
+            
         </div>
     )
 }
