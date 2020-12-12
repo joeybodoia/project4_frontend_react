@@ -6,6 +6,7 @@ const Song = (props) => {
 
     const {songs} = props
 
+
     const loadSong = () => (
         <>
         {console.log(props.match.params.id)}
@@ -27,7 +28,7 @@ const Song = (props) => {
     )
     return(
         <div>
-            <h1>Song page</h1>
+            <h1 style={{"color":"white"}}>Song page</h1>
             {loadSong()}
         </div>
     )

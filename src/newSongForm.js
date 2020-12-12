@@ -40,7 +40,7 @@ const SongForm = (props) => {
     }
     return(
         <div>
-            <h1>Song Form</h1>
+            <h1 style={{"color":"white"}}>Song Form</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="title" value={songForm.title} onChange={handleChange}/>
                 <input type="text" name="artist" value={songForm.artist} onChange={handleChange}/>

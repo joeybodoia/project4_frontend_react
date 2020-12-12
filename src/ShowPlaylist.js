@@ -15,7 +15,7 @@ const ShowPlaylist = (props) => {
             if (playlist.id == props.match.params.id) {
                 return(
                   <div style={{"border":"2px solid black"}}>
-                    <h1>{playlist.name}</h1>
+                    <h1 style={{"color":"white"}}>{playlist.name}</h1>
                   </div>
                 )
 
@@ -33,7 +33,7 @@ const ShowPlaylist = (props) => {
                 if (song.playlists[0].id == props.match.params.id) {
                     return(
                       <div style={{"border":"2px solid black"}}>
-                        <h1>{song.artist}</h1>
+                        <h1 style={{"color":"white"}}>{song.artist}</h1>
                       </div>
                     )
 

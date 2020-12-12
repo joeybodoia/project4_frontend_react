@@ -11,7 +11,7 @@ const Playlist = (props) => {
         {playlists.map((playlist)=> {
           return(
             <div style={{"border":"2px solid black"}}>
-              <h1>{playlist.name}</h1>
+              <h1 style={{"color":"white"}}>{playlist.name}</h1>
               <Link to={`/playlists/${playlist.id}`}>
                 <a>View Playlist</a>
               </Link>

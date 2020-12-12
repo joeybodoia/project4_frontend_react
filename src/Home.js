@@ -27,7 +27,7 @@ const Home = (props) => {
                         <Link to={`/${song.id}`}>
                             <button style={{"font-family":"'Rock Salt', cursive", "font-size":"0.8vw", "border":"2px solid gray", "border-radius":"4px", "background-color": "black", "color": "white"}}><a>View Song</a></button>
                         </Link>
-                        <button style={{"font-family":"'Rock Salt', cursive", "font-size":"0.8vw", "background-color":"red", "border":"2px solid black", "border-radius":"4px", "color":"white"}} onClick={async () => {
+                        <button  style={{"font-family":"'Rock Salt', cursive", "font-size":"0.8vw", "background-color":"red", "border":"2px solid black", "border-radius":"4px", "color":"white"}} onClick={async () => {
                         // make delete request
                         await fetch("http://localhost:3000/songs/" + song.id, {
                         method: "delete"
