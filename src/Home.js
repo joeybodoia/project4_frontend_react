@@ -35,6 +35,11 @@ const Home = (props) => {
                         // get updated list of notices
                         getSongs()
                         }}>Delete</button>
+                        <Link to={`/${song.id}/edit`}>
+                            <button style={{"font-family":"'Rock Salt', cursive", "font-size":"0.8vw", "border":"2px solid gray", "border-radius":"4px", "background-color": "black", "color": "white"}} onClick={()=>{
+                                props.selectSong(song)
+                            }}><a>Edit Song</a></button>
+                        </Link>
                     </div>
                 </div>
           )
