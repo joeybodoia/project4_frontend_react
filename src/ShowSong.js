@@ -12,10 +12,13 @@ const Song = (props) => {
         {songs.map((song)=> {
             if (song.id == props.match.params.id) {
                 return(
-                  <div style={{"border":"2px solid black"}}>
-                    <h1>{song.title}</h1>
-                    <h2>{song.artist}</h2>
-                    <img src={song.coverArt}></img>
+                  <div style={{ "display":"flex", "justifyContent":"center"}}>
+                      <div style={{"display": "flex", "flex-direction":"column", "border":"3px solid lightpink", "width":"40%", "justifyContent":"center", "border-radius": "3px", "background-color":"gray"}}>
+                        <h1 style={{"color":"white","font-family":"'Rock Salt', cursive", "font-size": "2vw"}}>Title: {song.title}</h1>
+                        <img src={song.coverArt} style={{"width":"60%", "margin-left":"auto", "margin-right":"auto", "border":"3px solid white", "border-radius": "3px"}}></img>
+                        <h2 style={{"color":"white", "font-family":"'Rock Salt', cursive","font-size": "1.7vw"}}>Artist: {song.artist}</h2>
+                        <h2 style={{"color":"white", "font-family":"'Rock Salt', cursive", "font-size": "1.5vw"}}>Album: {song.album}</h2>
+                      </div>
                   </div>
                 )
             }
