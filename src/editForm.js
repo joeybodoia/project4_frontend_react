@@ -32,7 +32,7 @@ const EditForm = (props) => {
                 <input style={{"width":"70%", "margin-right":"auto", "margin-left":"auto", "border":"2px solid gray", "border-radius":"5px", "font-family":"'Rock Salt', cursive", "font-size":"0.7vw"}} type="text" name="artist" value={editForm.artist} onChange={handleChange}placeholder="Artist"/>
                 <input style={{"width":"70%", "margin-right":"auto", "margin-left":"auto", "border":"2px solid gray", "border-radius":"5px", "font-family":"'Rock Salt', cursive", "font-size":"0.7vw"}} type="text" name="coverArt" value={editForm.coverArt} onChange={handleChange}placeholder="Cover Art (image link)"/>
                 <input style={{"width":"70%", "margin-right":"auto", "margin-left":"auto", "border":"2px solid gray", "border-radius":"5px", "font-family":"'Rock Salt', cursive", "font-size":"0.7vw"}} type="text" name="album" value={editForm.album} onChange={handleChange}placeholder="Album"/>
-                <input style={{"width":"30%", "margin-right":"auto", "margin-left":"auto","margin-bottom":"1.2vw", "font-family":"'Rock Salt', cursive", "font-size":"0.7vw", "background-color": "lavender", "border":"2px solid gray", "border-radius":"5px"}} type="submit" value="Create Song"/>
+                <input style={{"width":"30%", "margin-right":"auto", "margin-left":"auto","margin-bottom":"1.2vw", "font-family":"'Rock Salt', cursive", "font-size":"0.7vw", "background-color": "lavender", "border":"2px solid gray", "border-radius":"5px"}} type="submit" value="Update Song"/>
             </form>
 
             
