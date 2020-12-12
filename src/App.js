@@ -18,7 +18,7 @@ function App() {
 
   // Fuction to make API call to get songs
   const getSongs = async () => {
-    const response = await fetch("https://rails-songs-playlists-api.herokuapp.com/songs")
+    const response = await fetch("http://localhost:3000/songs")
     const data = await response.json()
     setSongs(data.reverse()) //reverse puts the created form data at the top of the page
   }
