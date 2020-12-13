@@ -9,3 +9,4 @@ The application has full CRUD: You're able to create songs, read in song and pla
 Future changes I want to make: I would like to add more playlist functionality. I want the user to be able to add songs to a playlist on the web application, as well as create new playlists. I also want to create auth functionality and allow users to log in and create data specific to their account.
 
 
+The application is deployed on netlify: https://friendly-nobel-d2d1bf.netlify.app/
